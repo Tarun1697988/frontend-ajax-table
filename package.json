@@ -12,16 +12,20 @@
 		"task",
 		"javascript"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"jquery": "3.3.1",
+		"axios": "0.18.0"
+	},
 	"devDependencies": {
 		"neutrino": "8.3.0",
 		"@atomspace/eslint": "2.4.0",
-		"@atomspace/stylelint": "1.1.1",
-		"browser-sync": "2.18.8"
+		"@neutrinojs/web": "8.3.0",
+		"@neutrinojs/jest": "8.3.0"
 	},
 	"scripts": {
-		"start": "browser-sync start --server \"src\" --files \"src\" --open \"external\" --no-notify --no-ghost-mode",
+		"start": "neutrino start",
+		"build": "neutrino build",
 		"eslint": "neutrino lint --fix",
-		"stylelint": "neutrino stylelint --fix"
+		"test": "neutrino test --verbose --watchAll --noStackTrace --silent"
 	}
 }

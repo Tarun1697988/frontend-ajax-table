@@ -5,6 +5,15 @@ module.exports = {
 				envs: ['browser']
 			}
 		}],
-		'@atomspace/stylelint'
+		['@neutrinojs/web', {
+			html: {
+				template: './src/index.html',
+				inject: true
+			},
+			devServer: {
+				open: false
+			}
+		}],
+		'@neutrinojs/jest'
 	]
 } 
