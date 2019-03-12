@@ -1,12 +1,24 @@
 export default function tableRow (data) {
 	const {
-		pictiure, isActive, about, balance, age, registered, company, email, phone, address
+		pictiure,
+		isActive,
+		about,
+		balance,
+		age,
+		registered,
+		company,
+		email,
+		phone,
+		address
 	} = data;
 
-	const { first, last } = data.name;
+	const {
+		first,
+		last
+	} = data.name;
 
 	const elementTableRow = `<tr>
-	<td><img src="${pictiure}" alt="Пользователь ${first} ${last} "/></td>
+	<td><img src="${pictiure}" alt="User photo"/></td>
 	<td>${first} ${last}</td>
 	<td>${isActive}</td>
 	<td>${about}</td>
